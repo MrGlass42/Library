@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+	<title>Test_Site -- Page 1</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="CSS/style.css">
+</head>
+<body onload="HideElement('Form');
+			  HideElement('Calculator')">
+	<header>
+		<div id="divHeader">
+			<h1 class="Titulo"> Pré Prova </h1>
+		</div>
+	</header>
+	<div style="background-color: orange; height: 40px;"></div>
+	<div id="Container">
+		<div class="Main">
+			
+			<br />
+
+
+			<div id="Principal">
+				<h1 style="font-family: cursive;"> Seja Bem vindo </h1>
+
+				<br />
+				<br />
+				
+				<img style="height: 300px;" src="Images/Mask.png" alt="Mak"/>
+
+				<h4> By: Mr.Glass...
+			</div>
+
+			<div id="Calculator">
+
+				<h2 style="font-family: cursive;">JS Calculator </h2>
+
+				<input id="Resultado" type="text" name="resultado" placeholder="Digite Aqui...">
+
+				<table id="Tabela">
+	    		<tr>
+	    			<td><button class="butaos" onclick="clearExpression()" type="button">CE</button></td>
+	    			<td><button class="butaos" onclick="clearLastIndex()"  type="button">C</button></td>
+	    			<td><button class="butaos" onclick="storeButtons('+')" type="button">+</button></td>
+	    			<td><button class="butaos" onclick="storeButtons('-')" type="button">-</button></td>
+	    		</tr>
+	    		<tr>
+	    			<td><button class="butaos" onclick="storeButtons('7')" type="button">7</button></td>
+	    			<td><button class="butaos" onclick="storeButtons('8')" type="button">8</button></td>
+	    			<td><button class="butaos" onclick="storeButtons('9')" type="button">9</button></td>
+	    			<td><button class="butaos" onclick="storeButtons('/')" type="button">/</button></td>	
+	    		</tr>
+	    		<tr>
+	    			<td><button class="butaos" onclick="storeButtons('4')" type="button">4</button></td>
+	    			<td><button class="butaos" onclick="storeButtons('5')" type="button">5</button></td>
+	    			<td><button class="butaos" onclick="storeButtons('6')" type="button">6</button></td>
+	    			<td><button class="butaos" onclick="storeButtons('*')" type="button">x</button></td>
+	    		</tr>
+	    		<tr>
+	    			<td><button class="butaos" onclick="storeButtons('1')" type="button">1</button></td>
+	    			<td><button class="butaos" onclick="storeButtons('2')" type="button">2</button></td>
+	    			<td><button class="butaos" onclick="storeButtons('3')" type="button">3</button></td>
+	    			<td><button class="butaos" onclick="storeButtons('0')" type="button">0</button></td>
+	    		</tr>
+	    		<tr>
+	    			<td><button id ="igual" class="butaos" onclick="getExpressionAndCalculate()" type="button">=</button></td>
+	    			<td><button class="butaos" onclick="storeButtons('.')" type="button">.</button></td>
+	    			<td><button class="butaos" onclick="storeButtons('(')" type="button">(</button></td>
+	    			<td><button class="butaos" onclick="storeButtons(')')" type="button">)</button></td>
+	    		</tr>
+		    </table>
+
+			</div>
+
+
+
+			<form id="Form">
+				<h2 class="Titulo"> Formulário de Cadastro de Estagiários </h2>
+				<img style="height: 150px; width: 150px;"src="Images/IBM.png" alt="LOGO_IBM"/>
+
+				<br />
+				<br />
+
+				Nome Completo:
+				<input style="width: 200px;" type="text" name="First_Name" placeholder="Digite Aqui..."/>
+				&emsp;&emsp; Rg: <input type="text" name="RG" placeholder="Digite Aqui..."/>
+				<br />
+				<br />
+				<label style="margin-left: 350px;">Rua:</label>
+				<input type="text" name="Last_Name" placeholder="Digite Aqui..."/>
+				&emsp;&emsp;<label style="margin-left: 110px;">Bairro:</label><input style="margin-right: 350px;"type="text" name="Bairro" placeholder="Digite Aqui..." />
+
+				<br />
+				<br />
+				<label style="margin-left: 10px;">Numero:</label><input style="width: 100px;" type="text" name="Numero" placeholder="Digite Aqui...">
+				<label>Estado:</label>
+				<select style="margin-right: 300px;">
+					<option value="SP">SP</option>
+					<option value="RJ">RJ</option>
+					<option value="PR">PR</option>
+					<option value="BH">BA</option>
+					<option value="RS">RS</option>
+					<option value="MG">MG</option>
+					<option value="SC">SC</option>
+					<option value="ES">ES</option>
+					<option value="AC">AC</option>
+				</select>
+
+				<br />
+				<br />
+
+				Gênero:
+				<input type="radio" name="Masculino">Masculino</input>
+				<input type="radio" name="Feminino">Feminino</input>
+				<input style="visibility: hidden; margin-left: 300px;" type="radio" name="Tool"></input>
+				<br />
+				<br />
+				Estado Civíl:
+				<input type="radio" name="Solteiro(a)">Solteiro(a)</input>
+				<input type="radio" name="Casado(a)">Casado(a)</input>
+				<input type="radio" name="Divorciado(a)">Divorciado(a)</input>
+				<input style="visibility: hidden; margin-left: 150px;" type="radio" name="Tool2"></input>
+
+				<br />
+				<br />
+				<br />
+
+				<button class="butao" type="button">Enviar</button>
+
+			</form>
+
+		</div>
+		<div id="SideMenu">
+			<input class="Icons" type="image" onclick="HideElement('Principal'); HideElement('Form'); ShowElement('Calculator');" src="Images/Calculator.png" name="Calculadora"/>
+			<input class="Icons" type="image" onclick="HideElement('Principal'); HideElement('Calculator'); ShowElement('Form');" src="Images/Form.png" name="Formulario"/>
+			<input class="Icons" type="image" onclick="" src="Images/Store.png" name="Loja"/>
+			<input class="Icons" type="image" onclick="HideElement('Form'); HideElement('Calculator');ShowElement('Principal')" src="Images/MaskIcon.png" name="Loja"/>
+		</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="Script/Code.js"></script>
+</body>
+</html>

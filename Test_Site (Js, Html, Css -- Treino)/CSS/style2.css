@@ -1,0 +1,13 @@
+body
+{
+	margin-top: -20px;
+	max-width: 1920px;
+	max-height: 1080px;
+}
+
+#cabecalho
+{
+	background-color: gold;
+	height: 100px;
+}
+
