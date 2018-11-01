@@ -3,6 +3,9 @@ package Pacote;
 /**
  *
  * @author Mr.Glass...
+ Esta Classe Usa Métodos da Classe La Consistencia
+ 
+ 
  */
 public class Endereco 
 {
